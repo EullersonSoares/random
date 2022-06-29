@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Enviando formulários</title>
+
+        <style>
+            .container {
+                max-width: 1080px;
+                margin: auto;
+            }
+
+            .formulario-revendedora {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 4em 0;
+            }
+
+            .formulario-revendedora form {
+                width: 80%;
+            }
+
+            .formulario-revendedora form .flex {
+                display: flex;
+                gap: 20px;
+            }
+
+            .formulario-revendedora form input, .formulario-revendedora form textarea {
+                min-height: 35px;
+                width: 100%;
+                border: 1px solid #000;  
+                padding-left: 5px;              
+            }
+
+            .formulario-revendedora form .column-100 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .formulario-revendedora form .column-50 {
+                width: 50%;
+                margin-bottom: 15px;
+            }
+
+            .formulario-revendedora form .column-33 {
+                width: 33.33%;
+                margin-bottom: 15px;
+            }
+
+            .formulario-revendedora form button[type="submit"] {
+                padding: 0.75em 2em;
+                background: #000;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .formulario-revendedora form button[type="submit"]:hover {
+                background: #EEB129;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="formulario-revendedora">
+                <form action="https://formsubmit.co/luan.coelho@stgconsult.com.br" method="POST">
+                    <div class="flex">
+                        <div class="column-50">
+                            <input type="text" name="Nome" placeholder="Nome: *" required>
+                        </div>
+
+                        <div class="column-50">
+                            <input type="tel" name="Telefone" placeholder="Telefone: *" required>
+                        </div>
+                    </div>
+
+                    <div class="column-100">
+                        <input type="email" name="E-mail" placeholder="E-mail: *" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="column-33">
+                            <input type="text" name="Cidade" placeholder="Cidade: *" required>
+                        </div>
+
+                        <div class="column-33">
+                            <input type="text" name="Estado" placeholder="Estado: *" required>
+                        </div>
+
+                        <div class="column-33">
+                            <input type="text" name="CPF/CNPJ"placeholder="CPF/CNPJ: *" >
+                        </div>
+                    </div>
+
+                    <div class="column-100">
+                        <input type="text" name="Marcas com as quais trabalho atualmente" placeholder="Marcas com as quais trabalho atualmente: *" required>
+                    </div>
+
+                    <div class="column-100">
+                        <textarea name="Mensagem" placeholder="Mensagem: *" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="https://www.calordapele.com.br/">
+                    <input type="hidden" name="_subject" value='Nova Resposta ao Formulário "Seja uma Revendedora"'>
+                    <input type="hidden" name="_autoresponse" value="Você recebeu mais uma resposta ao formulário, verifique os dados do formulário abaixo:">
+
+                    <button type="submit">ENVIAR</button>
+                </form>
+
+            </div>
+        </div>
+    </body>
+
+</html>

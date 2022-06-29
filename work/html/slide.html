@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+    <title>My Now Amazing Webpage</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+        .your-class {
+            width: 100%;
+        }
+        .your-class div{
+            height: 100px;
+            width: 100%;
+            background-color: aquamarine;
+
+        }
+    </style>
+    </head>
+    <body>
+  
+    <div class="your-class">
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.your-class').slick({
+            slidesToShow: 4,
+            draggable: false
+        });
+      });
+
+      
+      function alertsrc() {
+        alert(ILink[0]);
+      }
+
+      $('div#imagem-secundaria img').click(function() {
+          var ILink = [];
+          ILink = $(this).attr('src');
+          return ILink;
+
+          alertsrc();
+      });
+
+
+      
+
+    </script>
+  
+    </body>
+  </html>

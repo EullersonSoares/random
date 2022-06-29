@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+<!--Backup do código do Popup:-->
+<script>
+
+setTimeout(function(){
+    //Identificaçao de Elementos e Popups:
+    var imagensdocatalogo = $('div#imagem-catalogo'); 
+    var popupsdisponiveis = $('section#popup-container');
+    var loop = 0;
+
+    do {
+        texto = loop.toString();
+        $(imagensdocatalogo[loop]).addClass(texto);
+        $(popupsdisponiveis[loop]).addClass(texto);
+
+        loop++;
+    } while (loop <= imagensdocatalogo.length);
+
+    //abrir popup:
+    $(imagensdocatalogo).click(function(){
+        var classefinal = $(this).attr('class'), 
+            ultimaClasse = classefinal.substr( classefinal.lastIndexOf(' ') + 1);
+        
+        var numeroReferencia = parseInt(ultimaClasse);
+        $(popupsdisponiveis[numeroReferencia]).show();
+
+        $('html, body').css('overflow-y', 'hidden');
+    });
+
+    //fechar popup:
+    $('div#fechar-popup').click(function(){
+        var qnt = 0;
+
+        do {
+            $(popupsdisponiveis[qnt]).hide();
+            qnt++;
+        } while(qnt <= imagensdocatalogo.length);
+
+        $('html, body').css('overflow-y', 'auto');
+    });
+
+},5000);
+
+</script>
+
+
+
+
+    <!--Novo bloco de código (Popup):-->
+<script src="../open-popup.js"></script>
+
+</body>
+
+</html>

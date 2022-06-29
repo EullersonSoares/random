@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide up and slide down with css</title>
+
+    <link rel="stylesheet" href="../css/slide-up-and-down.css">    
+</head>
+<body>
+
+    <div class="open-and-close">
+        <span>Abrir e fechar</span>
+        
+        <div class="square">
+            <ul class="list">
+                <li class="item">Item um</li>
+                <li class="item">Item dois</li>
+                <li class="item">Item três</li>
+                <li class="item">Item quatro</li>
+                <li class="item">Item Cinco</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>            
+
+        document.querySelector('.open-and-close').addEventListener("mouseenter", function() {
+            let square = document.querySelector('.square');
+            if (square.classList.contains('slideUp')) {
+                square.classList.remove('slideUp'); 
+                square.classList.add('slideDown');
+            }       
+        });
+
+        document.querySelector('.open-and-close').addEventListener("mouseout", function() {
+            let square = document.querySelector('.square');
+            if (square.classList.contains('slideDown')) {
+                square.classList.remove('slideDown'); 
+                square.classList.add('slideUp');
+            }
+        });
+
+    </script>
+</body>
+</html>

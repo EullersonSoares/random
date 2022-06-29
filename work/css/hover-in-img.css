@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 200px;
+    width: 1000px;
+    background-color: antiquewhite;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+}
+
+.container-images>img {
+    height: 50px;
+    margin: 60px;
+}
+
+#lista-de-parceiros .elementor-widget-container .elementor-swiper .elementor-main-swiper .swiper-wrapper .swiper-slide div {
+    margin: 0;
+}
+
